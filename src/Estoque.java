@@ -31,7 +31,6 @@ public class Estoque {
             br.readLine();//pula linha 1
             double numLinhas = br.lines().count();
             int quantLinhas = (int)numLinhas;
-            System.out.println(quantLinhas);
             br.close();
 
             BufferedReader leitor = new BufferedReader(new FileReader(filename));

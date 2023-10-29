@@ -3,10 +3,10 @@ import java.io.*;
 public class Principal {
     public static void main(String[] args) {
         Estoque estoque = new Estoque();
-        estoque.preencheEstoque("Produtos/arquivoProdutos.txt");
+        estoque.preencheEstoque("arquivoProdutos.txt");
 
         //criando novo arquivo
-        String nomeArquivo = "Produtos/info.txt";
+        String nomeArquivo = "info.txt";
         Alimento[] alimento = new Alimento[estoque.getQuantAlimentos()];
         Eletrodomestico[] eletro = new Eletrodomestico[estoque.getQuantEletrodomesticos()];
         Vestuario[] vestuario = new Vestuario[estoque.getQuantVestuarios()];
@@ -25,32 +25,25 @@ public class Principal {
             for(int i=0; i<estoque.getProduto().length; i++){
 
                 if(estoque.getProduto()[i] instanceof Alimento){
-
                     alimento[contAlimento] = (Alimento) estoque.getProduto()[i];
                     if(alimentoCaro == null || alimento[contAlimento].getPreco() > alimento[contAlimento-1].getPreco())
                         alimentoCaro = alimento[contAlimento].getNome();
                     contAlimento++;
-                    
                 } else if(estoque.getProduto()[i] instanceof Eletrodomestico){
-
                     eletro[contEletro] = (Eletrodomestico) estoque.getProduto()[i];
                     if(eletroBarato == null || eletro[contEletro].getPreco() < eletro[contEletro-1].getPreco())
                         eletroBarato = eletro[contEletro].getNome();
                     contEletro++;
-
                 } else {
-
                     vestuario[contVestuario] = (Vestuario) estoque.getProduto()[i];
                     nomeVestuario[contVestuario] = vestuario[contVestuario].getNome();
                     escritor.write(nomeVestuario[contVestuario]);
                     if(contVestuario < estoque.getQuantVestuarios()-1)
                         escritor.write(", ");
                     contVestuario++;
-
                 }
                 
             }
-            
             escritor.write("\nQuantidade em estoque de vestuarios: "+estoque.getQuantVestuarios());
             escritor.write("\nAlimento mais caro: "+alimentoCaro);
             escritor.write("\nEletrodomestico mais barato: "+eletroBarato);
