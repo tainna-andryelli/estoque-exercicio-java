@@ -16,7 +16,7 @@ public class Principal {
         int contVestuario = 0;
         
         try{
-            FileWriter fw = new FileWriter(nomeArquivo); //abrir arquivo no modo escrita
+            FileWriter fw = new FileWriter(nomeArquivo); 
             BufferedWriter escritor = new BufferedWriter(fw);
             String alimentoCaro = null;
             String eletroBarato = null;
