@@ -11,3 +11,13 @@
   - O alimento mais caro
   - O eletrodoméstico mais barato
   - O nome e a quantidade em estoque de todos os produtos de vestuário 
+
+6. Além do exercício descrito, utilizei esse projeto para aprender comandos git.
+   
+## Tecnologias Utilizadas:
+- Java
+- Visual Studio Code
+- Git
+
+## Criado por:
+- Tainná Andryelli Ribeiro
