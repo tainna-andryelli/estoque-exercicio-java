@@ -1,0 +1,4 @@
+Produtos de Vestuario: Camiseta, Calca, Bermuda, Casaco, Moleton, Gravata, Camiseta
+Quantidade em estoque de vestuarios: 7
+Alimento mais caro: Fondue
+Eletrodomestico mais barato: Torradeira
