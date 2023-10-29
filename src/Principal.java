@@ -4,7 +4,6 @@ public class Principal {
     public static void main(String[] args) {
         Estoque estoque = new Estoque();
         estoque.preencheEstoque("arquivoProdutos.txt");
-
         //criando novo arquivo
         String nomeArquivo = "info.txt";
         Alimento[] alimento = new Alimento[estoque.getQuantAlimentos()];
